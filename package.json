@@ -1,0 +1,28 @@
+{
+  "name": "to-do-app",
+  "version": "1.0.0",
+  "description": "A Web Application to manage your daily routine",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aakash-thedev/to-do-app.git"
+  },
+  "keywords": [
+    "To",
+    "Do",
+    "App"
+  ],
+  "author": "Aakash Srivastava",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aakash-thedev/to-do-app/issues"
+  },
+  "homepage": "https://github.com/aakash-thedev/to-do-app#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
