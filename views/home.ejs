@@ -55,7 +55,6 @@
                 <div id="buttons">
     
                     <button type="submit" id="add-btn">Add task</button>
-                    <button type="submit" id="dlt-btn">Delete Task</button>
     
                 </div>
 
@@ -83,18 +82,23 @@
                         
                         <div id="task" class="taskBar">
 
-                            <i class="far fa-square"></i>
+                            <i class="far fa-circle"></i>
 
                             <div id="info">
 
-                                <p><%= task.description %></p>
-                                <p><%= task.date %> </p>
+                                <span><%= task.description %></span>
+                                <span>
+                                    <i class="far fa-calendar-alt"></i> &nbsp;
+                                    <%= task.date %>
+                                </span>
 
                             </div>
 
                             <span id="categ"> <%= task.category %>  </span>
 
-                            <i class="fas fa-times-circle"></i>
+                            <a id="delete" href="/delete-task/?description=<%= task.description %>&date=<%= task.data %>&category=<%= task.category %>">
+                                <i class="fas fa-times-circle"></i>
+                            </a>
 
                         </div>
 
@@ -109,6 +113,6 @@
     </main>
     
     <script src="https://kit.fontawesome.com/8e594f6fe3.js" crossorigin="anonymous"></script>
-    <script type="javascript" src="../assets/js/script.js"></script>
+    <script src="../assets/js/script.js"></script>
 </body>
 </html>

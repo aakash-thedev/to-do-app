@@ -1,7 +1,7 @@
 body{
     margin: 0;
     padding: 0;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 #to-do-app{
@@ -136,17 +136,8 @@ option{
     margin-right: 5%;
     font-size: 22px;
     color: white;
-}
-
-#dlt-btn{
-    height: 60px;
-    width: 140px;
-    background-color: rgb(255, 47, 47);
-    color: black;
-    border: none;
-    border-radius: 5px;
-    font-size: 22px;
-    color: white;
+    font-weight: bolder;
+    cursor: pointer;
 }
 
 #tommorow{
@@ -177,49 +168,77 @@ h3{
     color: rgb(255, 255, 255);
 }
 
+/* -------------- Task Bar CSS ----------- */
+
 ul{
     list-style: none;
+    margin-left: -5%;
 }
 
 li{
     height: 50px;
-    width: 100%;
-    border: 1px solid black;
+    width: 97%;
+    padding: 2px;
+    padding-left: 5px;
+    box-shadow: 1px 1px 5px 0px rgb(223, 222, 222);
+    border: none;
+    margin-bottom: 3%;
 }
 
 #task{
     height: 100%;
     width: 100%;
-    border: 1px solid red;
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.selected{
+    background-color: red;
 }
 
 #info{
-    margin-left: 10%;
+    margin-left: 5%;
     text-transform: capitalize;
-    width: 30%;
+    height: 100%;
+    width: 45%;
+    display: flex;
+    flex-wrap: wrap;
 }
 
-#info p:nth-child(2n){
-    font-size: 15px;
-    color: rgb(80, 80, 80);
+#info span:nth-child(2n+1){
+    width: 100%;
+    font-size: larger;
+    color: rgb(37, 37, 37);
 }
 
-#info p:nth-child(2n+1){
-    color: black;
-    font-weight: bolder;
-    border: 1px solid blue;
+#info span:nth-child(2n){
+    font-size: small;
+    color: grey;
 }
 
 #categ{
-    margin-left: 22%;
-    height: 100%;
-    width: 70px;
-    background-color: aqua;
+    height: 60%;
+    width: 21%;
+    background-color: rgb(200, 200, 200);
+    color: white;
+    border-radius: 10px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    font-size: medium;
+    font-weight: bolder;
 }
 
-.fa-times-circle{
-    margin-left: 35%;
+#delete{
+    margin-left: 20%;
+    color: red;
+}
+
+#delete:active, #delete:visited{
+    color: red;
 }
