@@ -1,35 +1,55 @@
-var tasksArray = [];
+// now import required database from models
+const Task = require('../models/task');
+
+// actions
 
 module.exports.home = function(req, res) {
 
-    return res.render('home', {
-        title : 'To Do App',
-        tasks: tasksArray
+    Task.find({}, function(error, tasksArray){
+
+        if(error){
+            console.log("Error fetching tasks from database");
+            return;
+        }
+
+        return res.render('home', {
+            title : 'To Do App',
+            tasks: tasksArray
+        });
+
     });
 }
 
 module.exports.createTask = function(req, res) {
 
-    console.log(req.body);
+    console.log(" Request Body - ", req.body);
 
-    tasksArray.push(req.body);
+    Task.create(req.body, function(error, newTask) {
 
-    return res.redirect('back');
+        if(error){
+            console.log("Error creating task");
+            return;
+        }
+
+        console.log("New Task Created", newTask);
+
+        return res.redirect('back');
+
+    });
 }
 
 module.exports.deleteTask = function(req, res) {
 
     console.log(req.query);
 
-    let des = req.query.description;
-    let dat = req.query.date;
-    let cat = req.query.category;
+    Task.remove({description : req.query.description}, function(err) {
 
-    let indexToBeDeleted = tasksArray.findIndex((data) => {
-        return (data.description == des);
+        if(err){
+            console.log("Error deleting task");
+            return;
+        }
+
+        return res.redirect('back');
+
     });
-
-    tasksArray.splice(indexToBeDeleted, 1);
-
-    return res.redirect('back');
 }

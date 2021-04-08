@@ -6,6 +6,9 @@ const port = 8000;
 // import routers here
 const routers = require('./routers/index');
 
+// merger database to express server from config file
+const db = require('./config/mongoose');
+
 // Set up the View Engine
 app.set('view engine', 'ejs');
 app.set('views', './views');

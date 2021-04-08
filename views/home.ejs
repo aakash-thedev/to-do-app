@@ -89,7 +89,7 @@
                                 <span><%= task.description %></span>
                                 <span>
                                     <i class="far fa-calendar-alt"></i> &nbsp;
-                                    <%= task.date %>
+                                    <%= String(task.date).substring(0, 16) %>
                                 </span>
 
                             </div>
