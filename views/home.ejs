@@ -1,0 +1,114 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> <%= title %> </title>
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+    <main id="to-do-app">
+
+        <div id="left-section">
+
+            <form method="POST" action="create-task">
+
+                <h2>Today</h2>
+
+                <div id="description">
+
+                    <p>Description</p>
+                    <input name="description" type="text" id="description-box" placeholder="What do you want to do ?" onfocus="this.placeholder = ''" onblur='this.placeholder = "What do you want to do ?"' required>
+    
+                </div>
+    
+                <div id="middle-section">
+
+                    <div id="category">
+    
+                        <label for="categories">Category</label>
+        
+                        <select name="category" id="categories" required>
+        
+                            <option value="choose">Choose a category</option>
+                            <option value="personal">Personal</option>
+                            <option value="work">Work</option>
+                            <option value="home">Home</option>
+                            <option value="grocery">Grocery</option>
+                            <option value="Others">Others</option>
+        
+                        </select>
+        
+                    </div>
+        
+                    <div id="date">
+    
+                        <label for="date"></label>
+                        <input name="date" type="date" id="datesection" required>
+    
+                    </div>
+
+                </div>
+    
+                <div id="buttons">
+    
+                    <button type="submit" id="add-btn">Add task</button>
+                    <button type="submit" id="dlt-btn">Delete Task</button>
+    
+                </div>
+
+                <div id="tommorow">
+                    <h3>Tommorow</h3>
+                    <i class="fas fa-chevron-circle-right"></i>
+                </div>
+                
+                <div id="upcoming">
+                    <h3>Upcoming</h3>
+                    <i class="fas fa-chevron-circle-right"></i>
+                </div>
+
+            </form>
+
+        </div>
+
+        <div id="right-section">
+
+            <ul>
+                
+                <% for (let task of tasks) { %>
+
+                    <li>
+                        
+                        <div id="task" class="taskBar">
+
+                            <i class="far fa-square"></i>
+
+                            <div id="info">
+
+                                <p><%= task.description %></p>
+                                <p><%= task.date %> </p>
+
+                            </div>
+
+                            <span id="categ"> <%= task.category %>  </span>
+
+                            <i class="fas fa-times-circle"></i>
+
+                        </div>
+
+                    </li>
+
+                <% } %>
+
+            </ul>
+
+        </div>
+
+    </main>
+    
+    <script src="https://kit.fontawesome.com/8e594f6fe3.js" crossorigin="anonymous"></script>
+    <script type="javascript" src="../assets/js/script.js"></script>
+</body>
+</html>
