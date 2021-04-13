@@ -9,19 +9,19 @@ body{
     margin-top: 2%;
     height: 90vh;
     width: 60%;
-    border: 1px solid grey;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: rgb(214, 214, 214);
+    background-color: rgb(240, 240, 240);
     position: relative;
 }
 
 #left-section{
-    height: 85%;
+    height: 60%;
     width: 45%;
     background-color: white;
     padding-left: 33px;
+    box-shadow: 1px 3px 5px rgb(233, 233, 233);
 }
 
 #left-section h2{
@@ -35,6 +35,9 @@ body{
     height: 85%;
     width: 45%;
     background-color: white;
+    position: relative;
+    box-shadow: 3px 3px 5px 0px rgb(233, 233, 233);
+    padding: 1%;
 }
 
 #description{
@@ -140,25 +143,6 @@ option{
     cursor: pointer;
 }
 
-#tommorow{
-    margin-top: 10%;
-}
-
-#tommorow, #upcoming{
-    height: 50px;
-    width: 90%;
-    background-color: rgb(209, 209, 209);
-    color: rgb(110, 107, 107);
-    font-size: large;
-    text-transform: uppercase;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 2%;
-    cursor: pointer;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
 h3{
     margin-left: 2%;
 }
@@ -170,9 +154,54 @@ h3{
 
 /* -------------- Task Bar CSS ----------- */
 
+#utilities{
+    position: absolute;
+    height: 5%;
+    width: 20%;
+    right: 3.5%;
+    top: 1.5%;
+}
+
+@keyframes clicked2{
+    from{
+        height: 100%;
+        width: 100%;
+    }
+
+    to{
+        height: 96%;
+        width: 96%;
+        font-size: 12px;
+        background-color: rgb(189, 184, 184);
+    }
+}
+
+#delete-btn{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    height: 100%;
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    background-color: red;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 5px;
+}
+
+#delete-btn:focus{
+    outline: none;
+}
+
+#delete-btn:active{
+    animation: clicked2 0.1s ease-in-out 0s;
+}
+
+
 ul{
     list-style: none;
     margin-left: -5%;
+    margin-top: 11%;
 }
 
 li{
@@ -195,8 +224,22 @@ li{
     cursor: pointer;
 }
 
+@keyframes shrinkIn {
+
+    from{
+        height: 50px;
+        width: 97%;
+    }
+    
+    to{
+        height: 40px;
+        width: 95%;
+    }
+}
+
 .selected{
-    background-color: red;
+    background-color: cyan;
+    border-radius: 50%;
 }
 
 #info{

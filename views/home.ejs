@@ -58,55 +58,58 @@
     
                 </div>
 
-                <div id="tommorow">
-                    <h3>Tommorow</h3>
-                    <i class="fas fa-chevron-circle-right"></i>
-                </div>
-                
-                <div id="upcoming">
-                    <h3>Upcoming</h3>
-                    <i class="fas fa-chevron-circle-right"></i>
-                </div>
-
             </form>
 
         </div>
 
         <div id="right-section">
 
-            <ul>
+            <form method="get" action="select-tasks">
+
+                <div id="utilities">
+
+                    <!-- <button id="delete-btn">Delete tasks </button> -->
+                    <button id="delete-btn" disabled>Delete</button>
+    
+                </div>
+
+                <ul>
                 
-                <% for (let task of tasks) { %>
-
-                    <li>
-                        
-                        <div id="task" class="taskBar">
-
-                            <i class="far fa-circle"></i>
-
-                            <div id="info">
-
-                                <span><%= task.description %></span>
-                                <span>
-                                    <i class="far fa-calendar-alt"></i> &nbsp;
-                                    <%= String(task.date).substring(0, 16) %>
-                                </span>
-
+                    <% for (let task of tasks) { %>
+    
+                        <li class="taskBar">
+                            
+                            <div id="task">
+    
+                                <!-- <i class="far fa-circle"></i> -->
+                                
+                                <input type="checkbox" class="myCheck" name="task" value="<%= task.description %>" onclick="checkSelected(this)">
+                                
+                                <div id="info">
+    
+                                    <span><%= task.description %></span>
+                                    <span>
+                                        <i class="far fa-calendar-alt"></i> &nbsp;
+                                        <%= String(task.date).substring(0, 16) %>
+                                    </span>
+    
+                                </div>
+    
+                                <span id="categ"> <%= task.category %>  </span>
+    
+                                <a id="delete" href="/delete-task/?description=<%= task.description %>&date=<%= task.data %>&category=<%= task.category %>">
+                                    <i class="fas fa-times-circle"></i>
+                                </a>
+    
                             </div>
+    
+                        </li>
+    
+                    <% } %>
+    
+                </ul>
 
-                            <span id="categ"> <%= task.category %>  </span>
-
-                            <a id="delete" href="/delete-task/?description=<%= task.description %>&date=<%= task.data %>&category=<%= task.category %>">
-                                <i class="fas fa-times-circle"></i>
-                            </a>
-
-                        </div>
-
-                    </li>
-
-                <% } %>
-
-            </ul>
+            </form>
 
         </div>
 
