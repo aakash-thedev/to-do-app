@@ -9,11 +9,31 @@ body{
     margin-top: 2%;
     height: 90vh;
     width: 60%;
+    min-width: 1100px;
+    min-height: 800px;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: rgb(240, 240, 240);
+    /* background-image: url('https://images.unsplash.com/photo-1593526367339-673b8872f19a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1607&q=80'); */
+    /* background-image: url('https://images.unsplash.com/photo-1513151233558-d860c5398176?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'); */
+    background-image: url('https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1347&q=80');
+    background-size: contain;
     position: relative;
+    user-select: none;
+}
+
+#heading{
+    position: absolute;
+    top: -1.5%;
+    left: 2%;
+    color: white;
+    font-size: 40px;
+}
+
+#heading > span{
+    color: white;
+    text-transform: uppercase;
+    font-size: 10px;
 }
 
 #left-section{
@@ -21,7 +41,6 @@ body{
     width: 45%;
     background-color: white;
     padding-left: 33px;
-    box-shadow: 1px 3px 5px rgb(233, 233, 233);
 }
 
 #left-section h2{
@@ -36,7 +55,6 @@ body{
     width: 45%;
     background-color: white;
     position: relative;
-    box-shadow: 3px 3px 5px 0px rgb(233, 233, 233);
     padding: 1%;
 }
 
@@ -101,6 +119,8 @@ option{
 
 #categories:focus{
     outline: none;
+    text-align: center;
+    user-select: none;
 }
 
 #date{
@@ -115,6 +135,7 @@ option{
     border: none;
     text-transform: uppercase;
     color: grey;
+    text-align: center;
 }
 
 #datesection:focus{
@@ -145,11 +166,6 @@ option{
 
 h3{
     margin-left: 2%;
-}
-
-.fa-chevron-circle-right{
-    margin-right: 2%;
-    color: rgb(255, 255, 255);
 }
 
 /* -------------- Task Bar CSS ----------- */
@@ -214,6 +230,12 @@ li{
     margin-bottom: 3%;
 }
 
+input[type=checkbox]{
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+}
+
 #task{
     height: 100%;
     width: 100%;
@@ -221,7 +243,6 @@ li{
     justify-content: flex-start;
     align-items: center;
     position: relative;
-    cursor: pointer;
 }
 
 @keyframes shrinkIn {
@@ -253,7 +274,7 @@ li{
 
 #info span:nth-child(2n+1){
     width: 100%;
-    font-size: larger;
+    font-size: 18px;
     color: rgb(37, 37, 37);
 }
 
@@ -264,21 +285,21 @@ li{
 
 #categ{
     height: 60%;
-    width: 21%;
-    background-color: rgb(200, 200, 200);
+    width: 18%;
+    margin-left: 5%;
+    background-color: rgb(92, 160, 250);
     color: white;
-    border-radius: 10px;
     border: none;
     display: flex;
     align-items: center;
     justify-content: center;
     text-transform: uppercase;
-    font-size: medium;
-    font-weight: bolder;
+    font-size: small;
+    font-weight: 600;
 }
 
 #delete{
-    margin-left: 20%;
+    margin-left: 17%;
     color: red;
 }
 

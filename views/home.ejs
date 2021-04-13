@@ -11,9 +11,13 @@
 
     <main id="to-do-app">
 
+        <p id="heading">Atask <br>
+            <span>A To-do management app</span>
+        </p>
+
         <div id="left-section">
 
-            <form method="POST" action="create-task">
+            <form method="POST" action="create-task" autocomplete="off">
 
                 <h2>Today</h2>
 
@@ -68,8 +72,7 @@
 
                 <div id="utilities">
 
-                    <!-- <button id="delete-btn">Delete tasks </button> -->
-                    <button id="delete-btn" disabled>Delete</button>
+                    <button id="delete-btn" disabled><i class="fas fa-trash"></i> &nbsp; Delete</button>
     
                 </div>
 
