@@ -17,7 +17,7 @@ const db = require('./config/mongoose');
 app.set('view engine', 'ejs');
 app.set('views', './views');
 
-app.use(express.urlencoded());
+app.use(express.urlencoded({ extended: false }));
 
 // To access Static files such as JS/CSS/IMAGES :
 app.use('*/assets', express.static(__dirname + '/assets'));
