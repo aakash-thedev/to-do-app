@@ -1,6 +1,10 @@
+// require express library from package.json
 const express = require('express');
 
+// create an express app
 const app = express();
+
+// define port no on which you need to run application
 const port = 8000;
 
 // import routers here

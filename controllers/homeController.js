@@ -3,6 +3,7 @@ const Task = require('../models/task');
 
 // actions
 
+// -------------------------------------------------Action for Home Page --------------------------------------- //
 module.exports.home = function(req, res) {
 
     Task.find({}, function(error, tasksArray){
@@ -25,6 +26,7 @@ module.exports.home = function(req, res) {
 
     });
 }
+// -------------------------------------------------Create a new task --------------------------------------- //
 
 module.exports.createTask = function(req, res) {
 
@@ -44,6 +46,8 @@ module.exports.createTask = function(req, res) {
     });
 }
 
+// -------------------------------------------------Delete an existing task --------------------------------------- //
+
 module.exports.deleteTask = function(req, res) {
 
     console.log(req.query);
@@ -59,6 +63,8 @@ module.exports.deleteTask = function(req, res) {
 
     });
 }
+
+// -------------------------------------------------Select multiple tasks and delete them --------------------------------------- //
 
 module.exports.selectTasks = function(req, res) {
 
