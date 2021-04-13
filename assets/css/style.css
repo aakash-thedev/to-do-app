@@ -1,3 +1,16 @@
+html {
+    overflow: scroll;
+    overflow-x: hidden;
+}
+::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+    background: #FF0000;
+}
+
 body{
     margin: 0;
     padding: 0;
@@ -20,6 +33,7 @@ body{
     background-size: contain;
     position: relative;
     user-select: none;
+    padding-bottom: 10px;
 }
 
 #heading{
@@ -48,14 +62,6 @@ body{
     border-bottom: 1px solid grey;
     width: 16%;
     text-transform: uppercase;
-}
-
-#right-section{
-    height: 85%;
-    width: 45%;
-    background-color: white;
-    position: relative;
-    padding: 1%;
 }
 
 #description{
@@ -153,7 +159,7 @@ option{
 #add-btn{
     height: 60px;
     width: 140px;
-    background-color: rgb(47, 255, 92);
+    background-color: rgb(92, 160, 250);
     color: black;
     border: none;
     border-radius: 5px;
@@ -169,6 +175,23 @@ h3{
 }
 
 /* -------------- Task Bar CSS ----------- */
+
+#right-section{
+    height: 85%;
+    width: 45%;
+    background-color: white;
+    position: relative;
+    padding: 1%;
+    overflow-y: scroll;
+}
+
+#my-tasks{
+    position: absolute;
+    top: 3%;
+    left: 6%;
+    color: grey;
+    font-size: smaller;
+}
 
 #utilities{
     position: absolute;
@@ -305,4 +328,11 @@ input[type=checkbox]{
 
 #delete:active, #delete:visited{
     color: red;
+}
+
+#copyright{
+    position: absolute;
+    bottom: 0%;
+    color: white;
+    font-size: 12px;
 }

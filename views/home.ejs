@@ -68,6 +68,8 @@
 
         <div id="right-section">
 
+            <span id="my-tasks">My Tasks (<%= tasks.length %>)</span>
+
             <form method="get" action="select-tasks">
 
                 <div id="utilities">
@@ -86,7 +88,7 @@
     
                                 <!-- <i class="far fa-circle"></i> -->
                                 
-                                <input type="checkbox" class="myCheck" name="task" value="<%= task.description %>" onclick="checkSelected(this)">
+                                <input type="checkbox" class="myCheck" name="task" value="<%= task.description %>" onclick="checkSelected()">
                                 
                                 <div id="info">
     
@@ -115,6 +117,11 @@
             </form>
 
         </div>
+
+        <section id="copyright">
+            <i class="far fa-copyright"></i>
+            Aakash Srivastava
+        </section>
 
     </main>
     
