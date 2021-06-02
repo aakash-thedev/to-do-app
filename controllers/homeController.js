@@ -17,6 +17,8 @@ module.exports.home = async function(req, res) {
 
     catch(err){
         console.log("Error fetching tasks from database", err);
+
+        return res.send("ERROR GETTING TO APP");
     }
 }
 // -------------------------------------------------Create a new task --------------------------------------- //
