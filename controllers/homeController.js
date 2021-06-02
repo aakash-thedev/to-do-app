@@ -7,6 +7,7 @@ const Task = require('../models/task');
 module.exports.home = async function(req, res) {
 
     try{
+
         let tasksArray = await Task.find({});
 
         return res.render('home', {
@@ -18,7 +19,7 @@ module.exports.home = async function(req, res) {
     catch(err){
         console.log("Error fetching tasks from database", err);
 
-        return res.send("ERROR GETTING TO APP");
+        return res.send("ERROR GETTING TO APP", err);
     }
 }
 // -------------------------------------------------Create a new task --------------------------------------- //
