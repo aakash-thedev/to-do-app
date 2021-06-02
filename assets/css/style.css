@@ -5,11 +5,10 @@ html {
     overflow-x: hidden;
 }
 ::-webkit-scrollbar {
-    width: 0;  /* Remove scrollbar space */
+    width: 5px;  /* Remove scrollbar space */
     background: transparent;  /* Optional: just make scrollbar invisible */
 }
 ::-webkit-scrollbar-thumb {
-    background: #FF0000;
 }
 
 body{
@@ -311,6 +310,7 @@ input[type=checkbox]{
     font-size: 17px;
     font-weight: 500;
     color: rgb(0, 0, 0);
+    overflow-x: scroll;
 }
 
 #info span:nth-child(2n){
