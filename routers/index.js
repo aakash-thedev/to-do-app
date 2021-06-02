@@ -9,7 +9,7 @@ const router = express.Router();
 const homeController = require('../controllers/homeController');
 
 
-router.get('/', homeController.home);
+router.get('', homeController.home);
 
 // for creating a task and storing in database
 router.post('/create-task', homeController.createTask);
