@@ -7,7 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
     "dev": "nodemon server.js",
-    "install-clients": "npm install"
+    "install-clients": "npm install",
+    "build": "ng build",
+    "heroku-postbuild": "ng build --prod"
   },
   "repository": {
     "type": "git",
@@ -30,6 +32,6 @@
     "mongoose": "^5.12.3"
   },
   "engines": {
-    "node": ">=10.0.0"
+    "node": "14.x"
   }
 }
