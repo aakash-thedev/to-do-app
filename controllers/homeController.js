@@ -4,24 +4,24 @@ const Task = require('../models/task');
 // actions
 
 // -------------------------------------------------Action for Home Page --------------------------------------- //
-// module.exports.home = async function(req, res) {
+module.exports.home = async function(req, res) {
 
-//     try{
+    try{
 
-//         let tasksArray = await Task.find();
+        let tasksArray = await Task.find();
 
-//         return res.render('home', {
-//             title : 'To Do App',
-//             tasks: tasksArray
-//         });
-//     }
+        return res.render('home', {
+            title : 'To Do App',
+            tasks: tasksArray
+        });
+    }
 
-//     catch(err){
-//         console.log("Error fetching tasks from database", err);
+    catch(err){
+        console.log("Error fetching tasks from database", err);
 
-//         return res.send("ERROR GETTING TO APP", err);
-//     }
-// }
+        return res.send("ERROR GETTING TO APP", err);
+    }
+}
 // -------------------------------------------------Create a new task --------------------------------------- //
 
 module.exports.createTask = function(req, res) {
