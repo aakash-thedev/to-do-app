@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 // make a connection to database
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/todo_database', { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect('mongodb+srv://aakash:Aakash22@cluster0.rmts6.mongodb.net/ataskdb?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true });
 
 // check if connection has been set or not
 const db = mongoose.connection;

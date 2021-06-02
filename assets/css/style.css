@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
 html {
     overflow: scroll;
     overflow-x: hidden;
@@ -6,7 +8,6 @@ html {
     width: 0;  /* Remove scrollbar space */
     background: transparent;  /* Optional: just make scrollbar invisible */
 }
-/* Optional: show position indicator in red */
 ::-webkit-scrollbar-thumb {
     background: #FF0000;
 }
@@ -14,7 +15,7 @@ html {
 body{
     margin: 0;
     padding: 0;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: 'Roboto', sans-serif !important;
 }
 
 #to-do-app{
@@ -51,10 +52,10 @@ body{
 }
 
 #left-section{
-    height: 60%;
     width: 45%;
     background-color: white;
     padding-left: 33px;
+    border-radius: 15px;
 }
 
 #left-section h2{
@@ -65,8 +66,12 @@ body{
 }
 
 #description{
-    height: 200px;
     width: 90%;
+    margin-bottom: 5%;
+    padding: 1%;
+    border-radius: 10px;
+    /* box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px; */
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
 }
 
 #description > p{
@@ -77,15 +82,13 @@ body{
 }
 
 #description > input{
-    padding-bottom: 100px;
+    padding-bottom: 60px;
     width: 100%;
     color: black;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     word-spacing: normal;
     line-height: 10px;
     font-size: medium;
     border: none;
-    box-shadow: 4px 3px 5px 0px rgb(211, 211, 211);;
 }
 
 #description > input:focus{
@@ -94,14 +97,19 @@ body{
 
 #middle-section{
     display: flex;
-    margin-bottom: 6%;
+    width: 92%;
+    justify-content: space-around;
+    margin-bottom: 4%;
 }
 
 #category{
-    height: 70px;
+    height: 50px;
     width: 40%;
-    margin-right: 9%;
-    box-shadow: 4px 3px 5px 0px rgb(211, 211, 211);
+    padding: 2%;
+    border-radius: 10px;
+    /* box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px; */
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    cursor: pointer;
 }
 
 #category > label{
@@ -109,6 +117,7 @@ body{
     font-size: medium;
     color: rgb(93, 87, 87);
     font-weight: 500;
+    cursor: pointer;
 }
 
 #categories{
@@ -117,6 +126,7 @@ body{
     border: none;
     background-color: white;
     color: grey;
+    cursor: pointer;
 }
 
 option{
@@ -131,8 +141,8 @@ option{
 
 #date{
     height: 70px;
-    width: 40.3%;
-    box-shadow: 4px 3px 5px 0px rgb(211, 211, 211);
+    width: 40%;
+    cursor: pointer;
 }
 
 #datesection{
@@ -141,7 +151,12 @@ option{
     border: none;
     text-transform: uppercase;
     color: grey;
-    text-align: center;
+    padding: 2%;
+    padding-left: 3%;
+    border-radius: 10px;
+    /* box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px; */
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    cursor: pointer;
 }
 
 #datesection:focus{
@@ -149,7 +164,6 @@ option{
 }
 
 #buttons{
-    height: 100px;
     width: 90%;
     display: flex;
     justify-content: center;
@@ -157,21 +171,17 @@ option{
 }
 
 #add-btn{
-    height: 60px;
-    width: 140px;
+    height: 50px;
+    width: 120px;
     background-color: rgb(92, 160, 250);
     color: black;
     border: none;
-    border-radius: 5px;
-    margin-right: 5%;
-    font-size: 22px;
+    border-radius: 15px;
+    font-size: 17px;
     color: white;
     font-weight: bolder;
     cursor: pointer;
-}
-
-h3{
-    margin-left: 2%;
+    text-transform: uppercase;
 }
 
 /* -------------- Task Bar CSS ----------- */
@@ -183,6 +193,7 @@ h3{
     position: relative;
     padding: 1%;
     overflow-y: scroll;
+    border-radius: 15px;
 }
 
 #my-tasks{
@@ -216,7 +227,6 @@ h3{
 }
 
 #delete-btn{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     height: 100%;
     width: 100%;
     border: none;
@@ -239,16 +249,17 @@ h3{
 
 ul{
     list-style: none;
-    margin-left: -5%;
+    margin-left: -7%;
     margin-top: 11%;
 }
 
 li{
     height: 50px;
     width: 97%;
-    padding: 2px;
-    padding-left: 5px;
-    box-shadow: 1px 1px 5px 0px rgb(223, 222, 222);
+    padding: 0.9%;
+    padding-left: 1.8%;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
     border: none;
     margin-bottom: 3%;
 }
@@ -297,8 +308,9 @@ input[type=checkbox]{
 
 #info span:nth-child(2n+1){
     width: 100%;
-    font-size: 18px;
-    color: rgb(37, 37, 37);
+    font-size: 17px;
+    font-weight: 500;
+    color: rgb(0, 0, 0);
 }
 
 #info span:nth-child(2n){
@@ -311,6 +323,7 @@ input[type=checkbox]{
     width: 18%;
     margin-left: 5%;
     background-color: rgb(92, 160, 250);
+    border-radius: 10px;
     color: white;
     border: none;
     display: flex;
