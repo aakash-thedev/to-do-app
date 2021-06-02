@@ -5,7 +5,7 @@ const express = require('express');
 const app = express();
 
 // define port no on which you need to run application
-const port = process.env.PORT || 9005;
+const port = process.env.PORT || 9000;
 
 // import routers here
 const routers = require('./routers/index');

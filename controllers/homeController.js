@@ -4,21 +4,20 @@ const Task = require('../models/task');
 // actions
 
 // -------------------------------------------------Action for Home Page --------------------------------------- //
-module.exports.home = function(req, res) {
+module.exports.home = async function(req, res) {
 
-    Task.find({}, function(error, tasksArray){
-
-        if(error){
-            console.log("Error fetching tasks from database");
-            return;
-        }
+    try{
+        let tasksArray = await Task.find({});
 
         return res.render('home', {
             title : 'To Do App',
             tasks: tasksArray
         });
+    }
 
-    });
+    catch(err){
+        console.log("Error fetching tasks from database", err);
+    }
 }
 // -------------------------------------------------Create a new task --------------------------------------- //
 
