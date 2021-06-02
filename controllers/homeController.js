@@ -8,7 +8,7 @@ module.exports.home = async function(req, res) {
 
     try{
 
-        let tasksArray = await Task.find({});
+        let tasksArray = await Task.find();
 
         return res.render('home', {
             title : 'To Do App',
