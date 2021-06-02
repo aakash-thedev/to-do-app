@@ -7,9 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
     "dev": "nodemon server.js",
-    "install-clients": "npm install",
-    "build": "ng build",
-    "heroku-postbuild": "ng build --prod"
+    "install-clients": "npm install"
   },
   "repository": {
     "type": "git",
