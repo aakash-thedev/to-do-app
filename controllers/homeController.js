@@ -13,12 +13,6 @@ module.exports.home = function(req, res) {
             return;
         }
 
-        if(tasksArray.length == 0){
-
-            return res.redirect('empty_screen');
-
-        }
-
         return res.render('home', {
             title : 'To Do App',
             tasks: tasksArray
